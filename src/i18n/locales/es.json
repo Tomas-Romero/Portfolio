@@ -1,0 +1,99 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "education": "Formación",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "role": "Estudiante de Ingeniería en Sistemas | Desarrollador Full Stack",
+    "description": "Desarrollador Full Stack apasionado por construir productos digitales sólidos, combinando lógica de backend robusta con interfaces cuidadas en cada detalle.",
+    "cta": {
+      "projects": "Ver Proyectos",
+      "contact": "Contactame",
+      "cv": "Descargar CV"
+    },
+    "scroll": "Scroll"
+  },
+  "skills": {
+    "title": "¿Qué hago?",
+    "subtitle": "Tecnologías y herramientas con las que construyo productos digitales de punta a punta.",
+    "categories": {
+      "all": "Todo",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Herramientas"
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Una selección de trabajos donde combiné desarrollo backend, diseño de interfaces y bases de datos relacionales.",
+    "viewLive": "Ver sitio",
+    "viewCode": "Ver código",
+    "items": {
+      "modasVanina": {
+        "title": "Modas Vanina",
+        "description": "E-commerce Full Stack para una tienda de indumentaria: catálogo dinámico, carrito, gestión de pedidos y panel de administración."
+      },
+      "gatheringHR": {
+        "title": "GatheringHR",
+        "description": "Plataforma web de reclutamiento enfocada en UX/UI, pensada para optimizar el proceso de selección de talento."
+      },
+      "utnEmprende": {
+        "title": "UTN Emprende 30",
+        "description": "Sistema de tabulación de puntajes para el programa de emprendedorismo de la UTN, con carga y cálculo automático de resultados."
+      }
+    }
+  },
+  "education": {
+    "title": "Formación",
+    "subtitle": "Mi recorrido académico y la formación adicional que complementa mi perfil como desarrollador.",
+    "items": {
+      "utn": {
+        "title": "Ingeniería en Sistemas de Información",
+        "institution": "Universidad Tecnológica Nacional (UTN)",
+        "period": "4° Año — En curso"
+      },
+      "coderhouseWeb": {
+        "title": "Desarrollador Web y JavaScript",
+        "institution": "Coderhouse",
+        "period": "Certificación"
+      },
+      "dataAnalytics": {
+        "title": "Data Analytics",
+        "institution": "Coderhouse",
+        "period": "Certificación"
+      },
+      "igcse": {
+        "title": "IGCSE Cambridge — Inglés (B2/C1)",
+        "institution": "Cambridge International",
+        "period": "Certificación internacional"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tenés un proyecto en mente o una oportunidad laboral? Escribime, con gusto lo charlamos.",
+    "availability": "Disponible para nuevos proyectos",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Contame sobre tu proyecto...",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado! Te responderé a la brevedad.",
+      "error": "Hubo un error al enviar. Intentá de nuevo o escribime directamente por email."
+    }
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "madeWith": "Diseñado y desarrollado por"
+  }
+  
+}

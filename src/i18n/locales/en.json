@@ -1,0 +1,98 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Software Engineering Student | Full Stack Developer",
+    "description": "Full Stack Developer passionate about building solid digital products, combining robust backend logic with carefully crafted interfaces.",
+    "cta": {
+      "projects": "View Projects",
+      "contact": "Get in Touch",
+      "cv": "Download CV"
+    },
+    "scroll": "Scroll"
+  },
+  "skills": {
+    "title": "What I Do",
+    "subtitle": "Technologies and tools I use to build digital products end to end.",
+    "categories": {
+      "all": "All",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools"
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A selection of work combining backend development, interface design, and relational databases.",
+    "viewLive": "View site",
+    "viewCode": "View code",
+    "items": {
+      "modasVanina": {
+        "title": "Modas Vanina",
+        "description": "Full Stack e-commerce for a clothing store: dynamic catalog, cart, order management, and admin dashboard."
+      },
+      "gatheringHR": {
+        "title": "GatheringHR",
+        "description": "Recruitment web platform focused on UX/UI, designed to streamline the talent selection process."
+      },
+      "utnEmprende": {
+        "title": "UTN Emprende 30",
+        "description": "Score tabulation system for UTN's entrepreneurship program, with automatic result loading and calculation."
+      }
+    }
+  },
+  "education": {
+    "title": "Education",
+    "subtitle": "My academic background and the additional training that complements my profile as a developer.",
+    "items": {
+      "utn": {
+        "title": "Information Systems Engineering",
+        "institution": "Universidad Tecnológica Nacional (UTN)",
+        "period": "4th Year — In progress"
+      },
+      "coderhouseWeb": {
+        "title": "Web Development & JavaScript",
+        "institution": "Coderhouse",
+        "period": "Certification"
+      },
+      "dataAnalytics": {
+        "title": "Data Analytics",
+        "institution": "Coderhouse",
+        "period": "Certification"
+      },
+      "igcse": {
+        "title": "IGCSE Cambridge — English (B2/C1)",
+        "institution": "Cambridge International",
+        "period": "International certification"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a project in mind or a job opportunity? Reach out, I'd love to talk about it.",
+    "availability": "Available for new projects",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent! I'll get back to you soon.",
+      "error": "Something went wrong. Please try again or email me directly."
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "madeWith": "Designed and built by"
+  }
+}
