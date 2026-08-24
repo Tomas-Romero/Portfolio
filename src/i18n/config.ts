@@ -14,6 +14,7 @@ i18n
       es: { translation: es },
     },
     fallbackLng: 'es',
+    load: 'languageOnly',
     interpolation: {
       escapeValue: false,
     },
@@ -22,5 +23,10 @@ i18n
       caches: ['localStorage'],
     },
   })
+
+document.documentElement.lang = i18n.language
+i18n.on('languageChanged', (lng) => {
+  document.documentElement.lang = lng
+})
 
 export default i18n

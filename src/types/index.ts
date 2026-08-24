@@ -9,6 +9,7 @@ export interface Skill {
   category: SkillCategory
   icon: IconType
   level: number // 0 - 100, usado para la barra de proficiency
+  color: string // color de marca de la tecnología
 }
 export interface Project {
   id: string
@@ -18,7 +19,6 @@ export interface Project {
   tags: string[]
   liveUrl?: string
   githubUrl?: string
-  featured?: boolean
 }
 export interface EducationItem {
   id: string
@@ -27,4 +27,12 @@ export interface EducationItem {
   periodKey: string
   type: 'degree' | 'course'
   icon: LucideIcon
+}
+export interface ExperienceItem {
+  id: string
+  titleKey: string
+  companyKey: string
+  periodKey: string
+  current?: boolean
+  bulletKeys: string[]
 }

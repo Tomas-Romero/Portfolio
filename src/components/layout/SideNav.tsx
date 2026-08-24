@@ -1,16 +1,7 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { useEffect, useState } from 'react'
-import { Home, User, Code2, FolderKanban, GraduationCap, Mail } from 'lucide-react'
-
-const sections = [
-  { id: 'home', icon: Home, key: 'nav.home' },
-  { id: 'about', icon: User, key: 'nav.about' },
-  { id: 'skills', icon: Code2, key: 'nav.skills' },
-  { id: 'projects', icon: FolderKanban, key: 'nav.projects' },
-  { id: 'education', icon: GraduationCap, key: 'nav.education' },
-  { id: 'contact', icon: Mail, key: 'nav.contact' },
-]
+import { navSections as sections } from '../../data/navigation'
 
 export function SideNav() {
   const { t } = useTranslation()

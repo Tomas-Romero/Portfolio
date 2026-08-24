@@ -13,10 +13,11 @@
   --color-text-primary-light: #0a0a0f;
   --color-text-secondary-light: #52525b;
 
-  /* Acento (identidad de marca) */
-  --color-accent: #64ffda;      /* cyan/verde menta - detalle tech */
-  --color-accent-hover: #4ade80;
-  --color-accent-soft: #64ffda1a;
+  /* Acento (identidad de marca) — violeta fluor combinado con azul */
+  --color-accent: #8b5cf6;
+  --color-accent-blue: #38bdf8;
+  --color-accent-hover: #a78bfa;
+  --color-accent-soft: #8b5cf61a;
 
   /* Bordes y divisores */
   --color-border: #27272a;
@@ -38,4 +39,18 @@ body {
   background-color: var(--color-background);
   color: var(--color-text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Remapea los tokens base para el tema claro */
+.light {
+  --color-background: var(--color-background-light);
+  --color-surface: var(--color-surface-light);
+  --color-text-primary: var(--color-text-primary-light);
+  --color-text-secondary: var(--color-text-secondary-light);
+  --color-border: var(--color-border-light);
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: #fff;
 }

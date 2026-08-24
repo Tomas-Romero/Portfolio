@@ -2,14 +2,19 @@
   "nav": {
     "home": "Inicio",
     "about": "Sobre mí",
-    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "services": "Servicios",
+    "skills": "Stack",
     "projects": "Proyectos",
     "education": "Formación",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "toggleTheme": "Cambiar tema",
+    "toggleLanguage": "Cambiar idioma",
+    "toggleMenu": "Abrir menú"
   },
   "hero": {
     "greeting": "Hola, soy",
-    "role": "Estudiante de Ingeniería en Sistemas | Desarrollador Full Stack",
+    "role": "Desarrollador Full Stack | Ingeniero en Sistemas (en formación)",
     "description": "Desarrollador Full Stack apasionado por construir productos digitales sólidos, combinando lógica de backend robusta con interfaces cuidadas en cada detalle.",
     "cta": {
       "projects": "Ver Proyectos",
@@ -18,8 +23,68 @@
     },
     "scroll": "Scroll"
   },
-  "skills": {
+  "about": {
+    "title": "Sobre mí",
+    "subtitle": "Un poco más sobre quién soy y cómo trabajo.",
+    "paragraph": "Desarrollador Full Stack con experiencia práctica construyendo soluciones web a medida para clientes locales e internacionales, combinando lógica de backend robusta con interfaces cuidadas. En paralelo, curso el último tramo de Ingeniería en Sistemas de Información (UTN). Perfil proactivo, con fuerte orientación a la resolución de problemas, el aprendizaje autodidacta y la colaboración en equipo.",
+    "facts": {
+      "location": { "label": "Ubicación", "value": "San Rafael, Mendoza, Argentina" },
+      "experience": { "label": "Experiencia", "value": "Freelance Full Stack — desde Mayo 2023" },
+      "education": { "label": "Educación", "value": "Ing. en Sistemas de Información (UTN) — 4° año" },
+      "languages": { "label": "Idiomas", "value": "Español (nativo), Inglés (B2/C1), Alemán (A2)" }
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "subtitle": "Mi recorrido profesional combinando trabajo freelance y proyectos institucionales.",
+    "current": "Actual",
+    "items": {
+      "freelance": {
+        "title": "Desarrollador Web Full Stack",
+        "company": "Freelance — San Rafael, Mendoza, Argentina",
+        "period": "Mayo 2023 — Presente",
+        "bullets": {
+          "management": "Gestión, diseño e implementación integral de sitios y aplicaciones web personalizadas para clientes locales e internacionales.",
+          "gatheringHR": "GatheringHR: diseño y desarrollo frontend de una plataforma de reclutamiento con React, enfocada en optimizar el flujo de usuarios y la interfaz (UX/UI).",
+          "modasVanina": "Modas Vanina: desarrollo Full Stack de una plataforma e-commerce integrando React, Node.js y PostgreSQL.",
+          "advisory": "Asesoramiento en arquitectura web, maquetación responsiva, diseño de marcas/flyers en Figma y administración de hosting y dominios."
+        }
+      },
+      "utnEmprende": {
+        "title": "Colaborador y Desarrollador de Sistema",
+        "company": "UTN Emprende 30 — Universidad Tecnológica Nacional (UTN FRSR)",
+        "period": "Noviembre 2023",
+        "bullets": {
+          "system": "Desarrollo del sistema informático de conteo y tabulación de puntajes para la evaluación de proyectos de emprendedurismo e innovación.",
+          "logistics": "Coordinación logística de presentaciones técnicas y gestión de recursos para equipos participantes."
+        }
+      }
+    }
+  },
+  "services": {
     "title": "¿Qué hago?",
+    "subtitle": "Soluciones digitales completas, adaptadas a cada proyecto.",
+    "items": {
+      "fullstack": {
+        "title": "Desarrollo Full Stack",
+        "description": "Aplicaciones web rápidas y robustas de punta a punta, con React en el frontend, Node.js en el backend y PostgreSQL para el modelado de datos."
+      },
+      "uxui": {
+        "title": "UX/UI & Diseño Responsivo",
+        "description": "Interfaces claras y prolijas, maquetadas con Tailwind CSS y Bootstrap, con diseño responsive mobile-first y prototipado en Figma."
+      },
+      "freelance": {
+        "title": "Freelance & Consultoría",
+        "description": "Gestión integral de proyectos para clientes locales e internacionales: arquitectura, hosting, dominios y acompañamiento de punta a punta."
+      },
+      "data": {
+        "title": "Datos & Automatización",
+        "description": "Scripts y sistemas en Python/SQL para tabulación de datos y análisis, aplicando herramientas de Data Analytics a problemas reales."
+      }
+    }
+  },
+  "skills": {
+    "title": "Mi Stack",
     "subtitle": "Tecnologías y herramientas con las que construyo productos digitales de punta a punta.",
     "categories": {
       "all": "Todo",
@@ -33,6 +98,7 @@
     "subtitle": "Una selección de trabajos donde combiné desarrollo backend, diseño de interfaces y bases de datos relacionales.",
     "viewLive": "Ver sitio",
     "viewCode": "Ver código",
+    "private": "Proyecto freelance — código privado",
     "items": {
       "modasVanina": {
         "title": "Modas Vanina",
@@ -41,36 +107,59 @@
       "gatheringHR": {
         "title": "GatheringHR",
         "description": "Plataforma web de reclutamiento enfocada en UX/UI, pensada para optimizar el proceso de selección de talento."
-      },
-      "utnEmprende": {
-        "title": "UTN Emprende 30",
-        "description": "Sistema de tabulación de puntajes para el programa de emprendedorismo de la UTN, con carga y cálculo automático de resultados."
       }
     }
   },
   "education": {
     "title": "Formación",
     "subtitle": "Mi recorrido académico y la formación adicional que complementa mi perfil como desarrollador.",
+    "formalTitle": "Educación Formal",
+    "additionalTitle": "Formación Adicional",
     "items": {
       "utn": {
-        "title": "Ingeniería en Sistemas de Información",
-        "institution": "Universidad Tecnológica Nacional (UTN)",
-        "period": "4° Año — En curso"
+        "title": "Ingeniería en Sistemas de Información (4° Año — Avanzado)",
+        "institution": "Universidad Tecnológica Nacional (UTN FRSR)",
+        "period": "Febrero 2023 — En curso"
       },
       "coderhouseWeb": {
         "title": "Desarrollador Web y JavaScript",
         "institution": "Coderhouse",
-        "period": "Certificación"
-      },
-      "dataAnalytics": {
-        "title": "Data Analytics",
-        "institution": "Coderhouse",
-        "period": "Certificación"
+        "period": "Marzo 2023 — Septiembre 2023"
       },
       "igcse": {
         "title": "IGCSE Cambridge — Inglés (B2/C1)",
-        "institution": "Cambridge International",
-        "period": "Certificación internacional"
+        "institution": "University of Cambridge",
+        "period": "Junio 2021"
+      },
+      "customerService": {
+        "title": "Atención al Cliente",
+        "institution": "Comercio \"Autoservicio El 52\"",
+        "period": "Marzo 2020 — Noviembre 2023"
+      },
+      "pythonIntro": {
+        "title": "Introducción a la Programación en Python",
+        "institution": "Universidad Tecnológica Nacional (UTN)",
+        "period": "Junio 2023"
+      },
+      "dataAnalytics": {
+        "title": "Data Analytics",
+        "institution": "Centro de Estudiantes de Ingeniería",
+        "period": "Agosto 2023"
+      },
+      "gitGithub": {
+        "title": "Curso de Git y GitHub",
+        "institution": "Universidad Tecnológica Nacional (UTN)",
+        "period": "Septiembre 2023"
+      },
+      "cneisi": {
+        "title": "Participación CNEISI 2023",
+        "institution": "UTN FRVM",
+        "period": "2023"
+      },
+      "joseii": {
+        "title": "Participación 39° JOSEII 2024",
+        "institution": "UTN FRSR",
+        "period": "Abril 2024"
       }
     }
   },
@@ -78,6 +167,8 @@
     "title": "Contacto",
     "subtitle": "¿Tenés un proyecto en mente o una oportunidad laboral? Escribime, con gusto lo charlamos.",
     "availability": "Disponible para nuevos proyectos",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
     "form": {
       "name": "Nombre",
       "namePlaceholder": "Tu nombre",
@@ -87,13 +178,17 @@
       "messagePlaceholder": "Contame sobre tu proyecto...",
       "submit": "Enviar mensaje",
       "sending": "Enviando...",
-      "success": "¡Mensaje enviado! Te responderé a la brevedad.",
-      "error": "Hubo un error al enviar. Intentá de nuevo o escribime directamente por email."
+      "successTitle": "¡Mensaje enviado!",
+      "success": "Gracias por escribirme. Te voy a responder a la brevedad.",
+      "sendAnother": "Enviar otro mensaje",
+      "errorTitle": "Algo salió mal",
+      "error": "Hubo un error al enviar. Intentá de nuevo o escribime directamente por email.",
+      "retry": "Intentar de nuevo"
     }
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
-    "madeWith": "Diseñado y desarrollado por"
+    "madeWith": "Diseñado y desarrollado por",
+    "backToTop": "Volver arriba"
   }
-  
 }

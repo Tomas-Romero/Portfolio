@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, type CSSProperties } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { skills, categories } from '../../data/skills'
@@ -23,7 +23,7 @@ export function Skills() {
         transition={{ duration: 0.6 }}
         className="mb-12 max-w-2xl"
       >
-        <p className="mb-2 font-mono text-sm text-accent">02 —</p>
+        <p className="mb-2 font-mono text-sm text-accent">04 —</p>
         <h2 className="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
           {t('skills.title')}
         </h2>
@@ -42,12 +42,12 @@ export function Skills() {
               <motion.span
                 layoutId="skill-filter-pill"
                 transition={{ type: 'spring', stiffness: 350, damping: 30 }}
-                className="absolute inset-0 rounded-full bg-accent"
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-accent to-accent-blue"
               />
             )}
             <span
               className={`relative z-10 ${
-                activeFilter === cat.id ? 'text-background' : 'text-text-secondary hover:text-accent'
+                activeFilter === cat.id ? 'text-white' : 'text-text-secondary hover:text-accent'
               }`}
             >
               {t(cat.labelKey)}
@@ -57,7 +57,7 @@ export function Skills() {
       </div>
 
       {/* Grid de skills */}
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         <AnimatePresence mode="popLayout">
           {filteredSkills.map((skill, index) => (
             <SkillCard key={skill.id} skill={skill} index={index} />
@@ -69,7 +69,6 @@ export function Skills() {
 }
 
 function SkillCard({ skill, index }: { skill: Skill; index: number }) {
-  const [hovered, setHovered] = useState(false)
   const Icon = skill.icon
 
   return (
@@ -78,41 +77,40 @@ function SkillCard({ skill, index }: { skill: Skill; index: number }) {
       initial={{ opacity: 0, scale: 0.85 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.85 }}
-      transition={{ duration: 0.35, delay: index * 0.04, ease: 'easeOut' }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      className="group relative overflow-hidden rounded-2xl border border-border
-                 bg-surface p-5 transition-colors duration-300 hover:border-accent"
+      whileHover={{ y: -4 }}
+      transition={{ duration: 0.35, delay: index * 0.03, ease: 'easeOut' }}
+      style={{ '--skill-color': skill.color } as CSSProperties}
+      className="group relative flex flex-col items-center gap-3 overflow-hidden rounded-2xl
+                 border border-border bg-surface px-4 py-6 text-center
+                 transition-colors duration-300 hover:border-[var(--skill-color)]"
     >
-      <div className="flex flex-col items-center gap-3 text-center">
-        <motion.div
-          animate={{ scale: hovered ? 1.15 : 1, rotate: hovered ? -6 : 0 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 15 }}
-          className="text-3xl text-text-secondary transition-colors duration-300 group-hover:text-accent"
-        >
-          <Icon />
-        </motion.div>
+      <div
+        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        style={{
+          background: `radial-gradient(circle at 50% 0%, ${skill.color}26, transparent 70%)`,
+        }}
+      />
 
-        <span className="text-sm font-medium text-text-primary">{skill.name}</span>
-
-        {/* Barra de proficiency */}
-        <div className="h-1 w-full overflow-hidden rounded-full bg-border">
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: hovered ? `${skill.level}%` : '0%' }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
-            className="h-full rounded-full bg-accent"
-          />
-        </div>
+      <div
+        className="relative flex h-12 w-12 items-center justify-center rounded-xl text-2xl transition-transform duration-300 group-hover:scale-110"
+        style={{ backgroundColor: `${skill.color}1f`, color: skill.color }}
+      >
+        <Icon />
       </div>
 
-      {/* Glow decorativo en hover */}
-      <motion.div
-        animate={{ opacity: hovered ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-        className="pointer-events-none absolute -bottom-6 left-1/2 h-16 w-16 -translate-x-1/2
-                   rounded-full bg-accent/30 blur-2xl"
-      />
+      <span className="relative text-sm font-medium text-text-primary">{skill.name}</span>
+
+      {/* Barra de proficiency */}
+      <div className="relative h-1 w-full overflow-hidden rounded-full bg-border">
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: `${skill.level}%` }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
+          className="h-full rounded-full"
+          style={{ backgroundColor: skill.color }}
+        />
+      </div>
     </motion.div>
   )
 }

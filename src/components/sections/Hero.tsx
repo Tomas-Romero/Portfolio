@@ -1,6 +1,7 @@
+import { useRef, useState } from 'react'
 import { motion, type Variants } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { ArrowDown, FileDown } from 'lucide-react'
+import { ArrowDown, FileDown, Code2 } from 'lucide-react'
 import { AnimatedBackground } from '../ui/AnimatedBackground'
 import { socialLinks } from '../../data/social'
 
@@ -17,7 +18,26 @@ const itemVariants: Variants = {
 }
 
 export function Hero() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const [videoError, setVideoError] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  const cvUrl = i18n.language.startsWith('en')
+    ? '/assets/cv-tomas-romero-en.pdf'
+    : '/assets/cv-tomas-romero.pdf'
+
+  const handlePlay = () => {
+    const video = videoRef.current
+    if (video) video.play().catch(() => {})
+  }
+
+  const handlePause = () => {
+    const video = videoRef.current
+    if (video) {
+      video.pause()
+      video.currentTime = 0
+    }
+  }
 
   return (
     <section
@@ -46,7 +66,10 @@ export function Hero() {
             className="text-4xl font-bold leading-tight tracking-tight text-text-primary
                        sm:text-5xl lg:text-6xl"
           >
-            Tomás Agustín <span className="text-accent">Romero</span>
+            Tomas{' '}
+            <span className="bg-gradient-to-r from-accent to-accent-blue bg-clip-text text-transparent">
+              Romero
+            </span>
           </motion.h1>
 
           <motion.h2
@@ -67,7 +90,8 @@ export function Hero() {
           <motion.div variants={itemVariants} className="mt-8 flex flex-wrap items-center gap-4">
             <a
               href="#projects"
-              className="rounded-full bg-accent px-6 py-3 text-sm font-semibold text-background
+              className="rounded-full bg-gradient-to-r from-accent to-accent-blue px-6 py-3 text-sm font-semibold
+                         text-white shadow-[0_0_24px_-8px_var(--color-accent)]
                          transition-transform duration-300 hover:scale-105"
             >
               {t('hero.cta.projects')}
@@ -82,7 +106,7 @@ export function Hero() {
             </a>
 
             <a
-              href="/assets/cv-tomas-romero.pdf"
+              href={cvUrl}
               download
               className="flex items-center gap-2 text-sm font-medium text-text-secondary
                          transition-colors duration-300 hover:text-accent"
@@ -124,15 +148,41 @@ export function Hero() {
             className="relative"
           >
             {/* Forma decorativa detrás */}
-            <div className="absolute inset-0 -z-10 translate-x-4 translate-y-4 rounded-[2.5rem] bg-accent/20" />
+            <div className="absolute inset-0 -z-10 translate-x-4 translate-y-4 rounded-[2.5rem]
+                             bg-gradient-to-br from-accent/30 to-accent-blue/30" />
 
-            <div className="h-72 w-64 overflow-hidden rounded-[2.5rem] border-2 border-border
-                            bg-surface sm:h-80 sm:w-72 lg:h-96 lg:w-80">
-              <img
-                src="/assets/profile.jpg"
-                alt="Tomás Agustín Romero"
-                className="h-full w-full object-cover grayscale-0"
-              />
+            <div
+              onMouseEnter={handlePlay}
+              onMouseLeave={handlePause}
+              onFocus={handlePlay}
+              onBlur={handlePause}
+              tabIndex={0}
+              className="h-72 w-64 overflow-hidden rounded-[2.5rem] border-2 border-border
+                         bg-surface sm:h-80 sm:w-72 lg:h-96 lg:w-80"
+            >
+              {videoError ? (
+                <div className="flex h-full w-full flex-col items-center justify-center gap-3
+                                 bg-gradient-to-br from-accent/20 via-surface to-accent-blue/10">
+                  <span className="bg-gradient-to-br from-accent to-accent-blue bg-clip-text
+                                    font-mono text-5xl font-bold text-transparent">
+                    TR
+                  </span>
+                  <Code2 size={22} className="text-text-secondary" />
+                </div>
+              ) : (
+                <video
+                  ref={videoRef}
+                  src="/assets/profile-video.mp4"
+                  poster="/assets/profile-poster.jpg"
+                  onError={() => setVideoError(true)}
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label="Tomás Agustín Romero"
+                  className="h-full w-full object-cover"
+                />
+              )}
             </div>
           </motion.div>
         </motion.div>
