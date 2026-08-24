@@ -23,7 +23,7 @@ export function About() {
         transition={{ duration: 0.6 }}
         className="mb-12 max-w-2xl"
       >
-        <p className="mb-2 font-mono text-sm text-accent">01 —</p>
+        <p className="mb-2 font-mono text-sm text-accent">02 —</p>
         <h2 className="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
           {t('about.title')}
         </h2>
@@ -51,17 +51,20 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.5, delay: index * 0.08, ease: 'easeOut' }}
-                className="flex flex-col gap-3 rounded-xl border border-border bg-surface p-5
-                           transition-colors duration-300 hover:border-accent/40"
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="group flex flex-col gap-3 rounded-xl border border-border bg-surface p-5
+                           transition-all duration-300 ease-out hover:border-accent hover:bg-accent/5
+                           hover:shadow-[0_8px_30px_-12px_var(--color-accent)]"
               >
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/10 text-accent">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/10 text-accent
+                                 transition-transform duration-300 group-hover:scale-110">
                   <Icon size={16} />
                 </div>
                 <div>
-                  <p className="text-xs font-mono text-text-secondary">
+                  <p className="text-xs font-mono text-text-secondary transition-colors duration-300 group-hover:text-accent">
                     {t(`about.facts.${key}.label`)}
                   </p>
-                  <p className="mt-1 text-sm font-medium text-text-primary">
+                  <p className="mt-1 text-sm font-semibold text-text-primary">
                     {t(`about.facts.${key}.value`)}
                   </p>
                 </div>

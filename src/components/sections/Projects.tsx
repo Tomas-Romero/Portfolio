@@ -23,7 +23,7 @@ export function Projects() {
         transition={{ duration: 0.6 }}
         className="mb-12 max-w-2xl"
       >
-        <p className="mb-2 font-mono text-sm text-accent">05 —</p>
+        <p className="mb-2 font-mono text-sm text-accent">01 —</p>
         <h2 className="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
           {t('projects.title')}
         </h2>

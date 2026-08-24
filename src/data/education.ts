@@ -6,7 +6,6 @@ import {
   GitBranch,
   Award,
   Terminal,
-  Store,
   Presentation,
 } from 'lucide-react'
 import type { EducationItem } from '../types'

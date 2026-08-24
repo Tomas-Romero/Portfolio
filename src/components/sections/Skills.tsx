@@ -23,7 +23,7 @@ export function Skills() {
         transition={{ duration: 0.6 }}
         className="mb-12 max-w-2xl"
       >
-        <p className="mb-2 font-mono text-sm text-accent">04 —</p>
+        <p className="mb-2 font-mono text-sm text-accent">05 —</p>
         <h2 className="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl">
           {t('skills.title')}
         </h2>
@@ -104,7 +104,7 @@ function SkillCard({ skill, index }: { skill: Skill; index: number }) {
       <div className="relative h-1 w-full overflow-hidden rounded-full bg-border">
         <motion.div
           initial={{ width: 0 }}
-          whileInView={{ width: `${skill.level}%` }}
+          whileInView={{ width: `100%` }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
           className="h-full rounded-full"

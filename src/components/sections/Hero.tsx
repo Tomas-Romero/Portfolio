@@ -2,7 +2,6 @@ import { useRef, useState } from 'react'
 import { motion, type Variants } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { ArrowDown, FileDown, Code2 } from 'lucide-react'
-import { AnimatedBackground } from '../ui/AnimatedBackground'
 import { socialLinks } from '../../data/social'
 
 const containerVariants = {
@@ -44,8 +43,6 @@ export function Hero() {
       id="home"
       className="relative flex min-h-screen items-center overflow-hidden pt-16"
     >
-      <AnimatedBackground />
-
       <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-8">
         {/* Columna de texto */}
         <motion.div

@@ -10,6 +10,7 @@ import { Projects } from './components/sections/Projects'
 import { Education } from './components/sections/Education'
 import { Contact } from './components/sections/Contact'
 import { Footer } from './components/sections/Footer'
+import { StatsBar } from './components/sections/StatsBar'
 import { ScrollToTop } from './components/ui/ScrollToTop'
 
 function App() {
@@ -18,11 +19,12 @@ function App() {
       <Loader />
       <Layout>
         <Hero />
+        <Projects />
         <About />
         <Experience />
         <Services />
+        <StatsBar />
         <Skills />
-        <Projects />
         <Education />
         <Contact />
         <Footer />

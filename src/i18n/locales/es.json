@@ -83,6 +83,12 @@
       }
     }
   },
+  "stats": {
+    "experience": "Años de experiencia",
+    "projects": "Proyectos destacados",
+    "technologies": "Tecnologías",
+    "training": "Cursos y certificaciones"
+  },
   "skills": {
     "title": "Mi Stack",
     "subtitle": "Tecnologías y herramientas con las que construyo productos digitales de punta a punta.",

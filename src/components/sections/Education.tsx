@@ -1,9 +1,15 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { formalEducation, additionalTraining } from '../../data/education'
+import { useActiveOnScroll } from '../../hooks/useActiveOnScroll'
 
 export function Education() {
   const { t } = useTranslation()
+  const { activeId, setActiveId, registerRef } = useActiveOnScroll(
+    formalEducation.map((item) => item.id)
+  )
+  const [activeAdditional, setActiveAdditional] = useState<string | null>(null)
 
   return (
     <section id="education" className="py-24 sm:py-32">
@@ -21,7 +27,7 @@ export function Education() {
         <p className="mt-4 text-text-secondary">{t('education.subtitle')}</p>
       </motion.div>
 
-      {/* Educación formal — timeline con línea y nodos animados */}
+      {/* Educación formal — timeline con línea y nodos animados, resaltado por scroll/click */}
       <h3 className="mb-6 font-mono text-sm font-semibold uppercase tracking-wide text-text-secondary">
         {t('education.formalTitle')}
       </h3>
@@ -40,35 +46,40 @@ export function Education() {
           {formalEducation.map((item, index) => {
             const Icon = item.icon
             const isDegree = item.type === 'degree'
+            const isActive = activeId === item.id
 
             return (
               <motion.li
                 key={item.id}
+                ref={registerRef(item.id)}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
-                className="relative flex gap-5"
+                onClick={() => setActiveId(item.id)}
+                className="relative flex cursor-pointer gap-5"
               >
                 <motion.div
                   initial={{ scale: 0.4, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
-                  whileHover={{ scale: 1.15 }}
+                  animate={{ scale: isActive ? 1.15 : 1 }}
                   viewport={{ once: true, margin: '-60px' }}
-                  transition={{ duration: 0.5, delay: index * 0.1 + 0.15, ease: 'backOut' }}
-                  className={`relative z-10 flex h-10 w-10 shrink-0 cursor-default items-center justify-center rounded-full border-2 transition-colors duration-300
-                              ${isDegree
-                                ? 'border-accent bg-accent/10 text-accent hover:shadow-[0_0_16px_-2px_var(--color-accent)]'
-                                : 'border-border bg-surface text-text-secondary hover:border-accent hover:text-accent'}`}
+                  transition={{ duration: 0.4, ease: 'easeOut' }}
+                  className={`relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-300
+                              ${isDegree || isActive
+                                ? 'border-accent bg-accent/10 text-accent'
+                                : 'border-border bg-surface text-text-secondary'}`}
                 >
                   <Icon size={18} />
                 </motion.div>
 
                 <div
-                  className={`flex-1 rounded-xl border p-5 transition-colors duration-300
-                              ${isDegree
-                                ? 'border-accent/40 bg-accent/5'
-                                : 'border-border bg-surface hover:border-accent/40'}`}
+                  className={`flex-1 rounded-xl border p-5 transition-all duration-300
+                              ${isActive
+                                ? 'border-accent bg-accent/10 shadow-[0_0_28px_-10px_var(--color-accent)]'
+                                : isDegree
+                                  ? 'border-accent/40 bg-accent/5'
+                                  : 'border-border bg-surface hover:border-accent/40'}`}
                 >
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <h3 className="font-semibold text-text-primary">{t(item.titleKey)}</h3>
@@ -82,7 +93,7 @@ export function Education() {
         </ul>
       </div>
 
-      {/* Formación adicional — aparece en cascada */}
+      {/* Formación adicional — aparece en cascada, se resalta al hacer click */}
       <h3 className="mb-6 font-mono text-sm font-semibold uppercase tracking-wide text-text-secondary">
         {t('education.additionalTitle')}
       </h3>
@@ -90,6 +101,8 @@ export function Education() {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {additionalTraining.map((item, index) => {
           const Icon = item.icon
+          const isActive = activeAdditional === item.id
+
           return (
             <motion.div
               key={item.id}
@@ -98,10 +111,16 @@ export function Education() {
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.45, delay: index * 0.08, ease: 'easeOut' }}
               whileHover={{ y: -3 }}
-              className="flex items-start gap-3 rounded-xl border border-border bg-surface p-4
-                         transition-colors duration-300 hover:border-accent/50"
+              onClick={() => setActiveAdditional((current) => (current === item.id ? null : item.id))}
+              className={`flex cursor-pointer items-start gap-3 rounded-xl border p-4 transition-all duration-300
+                          ${isActive
+                            ? 'border-accent bg-accent/10 shadow-[0_0_24px_-10px_var(--color-accent)]'
+                            : 'border-border bg-surface hover:border-accent/50'}`}
             >
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
+              <div
+                className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-colors duration-300
+                            ${isActive ? 'bg-accent text-white' : 'bg-accent/10 text-accent'}`}
+              >
                 <Icon size={16} />
               </div>
               <div className="min-w-0">

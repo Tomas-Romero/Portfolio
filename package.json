@@ -12,6 +12,8 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.3.3",
+    "@tsparticles/react": "^4.3.2",
+    "@tsparticles/slim": "^4.3.2",
     "framer-motion": "^13.1.1",
     "i18next": "^26.4.0",
     "i18next-browser-languagedetector": "^8.2.1",
