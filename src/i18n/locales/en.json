@@ -105,14 +105,31 @@
     "viewLive": "View site",
     "viewCode": "View code",
     "private": "Freelance project — private code",
+    "demoLogin": "Demo login",
     "items": {
+      "portfolio": {
+        "title": "Portfolio",
+        "description": "This very site: my personal portfolio built with React, TypeScript and Tailwind CSS, Framer Motion animations, light/dark mode, bilingual support, and an interactive particle background."
+      },
       "modasVanina": {
         "title": "Modas Vanina",
-        "description": "Full Stack e-commerce for a clothing store: dynamic catalog, cart, order management, and admin dashboard."
+        "description": "Price-free online catalog for a clothing and variety store in San Rafael, Mendoza. Customers build a list and reach out via WhatsApp; the owner manages everything from her own admin panel."
+      },
+      "kioscontrol": {
+        "title": "KiosControl",
+        "description": "POS and business management system for convenience stores: multi-method checkout, barcode scanning, sold-by-weight items, offline mode, thermal printing, running tabs, and BI reports."
+      },
+      "frakta": {
+        "title": "Frakta",
+        "description": "A backend-free SPA for personal and academic organization: schedule, tasks, finances, and shared expenses, all stored in the browser (IndexedDB) for full privacy and offline use."
       },
       "gatheringHR": {
         "title": "GatheringHR",
-        "description": "Recruitment web platform focused on UX/UI, designed to streamline the talent selection process."
+        "description": "Website for an HR consultancy with real-time job listings via Google Sheets API, separate contact flows for companies and candidates, and responsive, SEO-optimized design."
+      },
+      "proyectoBD": {
+        "title": "Database Project",
+        "description": "Relational database modeling in PostgreSQL for a real business, with a Node.js REST API and a static catalog/admin frontend. Built as a team project."
       }
     }
   },

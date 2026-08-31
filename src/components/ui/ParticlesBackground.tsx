@@ -45,7 +45,11 @@ function ParticlesLayer({ containerRef }: { containerRef: React.MutableRefObject
         },
       },
       interactivity: {
-        detectsOn: 'canvas',
+        // 'window' tracks the mouse anywhere on the page (not just over the
+        // canvas), so the hover/click effect still reacts even when the
+        // cursor is over regular content — without needing pointer-events
+        // on the canvas itself, so clicks/buttons underneath stay untouched.
+        detectsOn: 'window',
         events: {
           onHover: { enable: true, mode: 'grab' },
           onClick: { enable: true, mode: 'repulse' },
@@ -87,7 +91,7 @@ export function ParticlesBackground() {
   }, [])
 
   return (
-    <div ref={wrapperRef} className="fixed inset-0 -z-10 overflow-hidden">
+    <div ref={wrapperRef} className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
       <ParticlesProvider init={initEngine}>
         <ParticlesLayer containerRef={containerRef} />
       </ParticlesProvider>

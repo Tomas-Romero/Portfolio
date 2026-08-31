@@ -82,6 +82,16 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           </p>
         </div>
 
+        {project.demoCredentials && (
+          <div className="flex flex-wrap items-center gap-x-2 gap-y-1 rounded-lg border border-border
+                           bg-background/60 px-3 py-2 font-mono text-xs text-text-secondary">
+            <span className="font-semibold text-accent">{t('projects.demoLogin')}:</span>
+            <span className="select-all">{project.demoCredentials.user}</span>
+            <span className="text-border">/</span>
+            <span className="select-all">{project.demoCredentials.password}</span>
+          </div>
+        )}
+
         {/* Tecnologías utilizadas, con color de marca */}
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => {

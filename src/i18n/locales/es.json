@@ -105,14 +105,31 @@
     "viewLive": "Ver sitio",
     "viewCode": "Ver código",
     "private": "Proyecto freelance — código privado",
+    "demoLogin": "Login demo",
     "items": {
+      "portfolio": {
+        "title": "Portfolio",
+        "description": "Este mismo sitio: mi portfolio personal con React, TypeScript y Tailwind CSS, animaciones en Framer Motion, modo claro/oscuro, soporte bilingüe y un fondo de partículas interactivo."
+      },
       "modasVanina": {
         "title": "Modas Vanina",
-        "description": "E-commerce Full Stack para una tienda de indumentaria: catálogo dinámico, carrito, gestión de pedidos y panel de administración."
+        "description": "Catálogo online sin precios para una tienda de indumentaria y variedades en San Rafael, Mendoza. El cliente arma su lista y consulta por WhatsApp; la dueña administra todo desde un panel propio."
+      },
+      "kioscontrol": {
+        "title": "KiosControl",
+        "description": "Sistema POS y gestión comercial para kioscos: cobro multi-método, lector de código de barras, venta por peso, modo offline, impresión térmica, cuentas corrientes y reportes de BI."
+      },
+      "frakta": {
+        "title": "Frakta",
+        "description": "SPA de organización personal y académica sin backend: horario, tareas, finanzas y gastos compartidos, todo guardado en el navegador (IndexedDB) para privacidad total y uso offline."
       },
       "gatheringHR": {
         "title": "GatheringHR",
-        "description": "Plataforma web de reclutamiento enfocada en UX/UI, pensada para optimizar el proceso de selección de talento."
+        "description": "Sitio para una consultora de RR.HH. con vacantes en tiempo real vía Google Sheets API, formularios de contacto separados para empresas y postulantes, y diseño responsive optimizado para SEO."
+      },
+      "proyectoBD": {
+        "title": "Proyecto Base de Datos",
+        "description": "Modelado de base de datos relacional en PostgreSQL para un negocio real, con API REST en Node.js y frontend estático de catálogo y administración. Trabajo realizado en equipo."
       }
     }
   },

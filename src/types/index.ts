@@ -19,6 +19,7 @@ export interface Project {
   tags: string[]
   liveUrl?: string
   githubUrl?: string
+  demoCredentials?: { user: string; password: string }
 }
 export interface EducationItem {
   id: string

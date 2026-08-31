@@ -1,34 +1,43 @@
-# React + TypeScript + Vite
+# Portfolio — Tomás Romero
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## ¿Qué es esto?
 
-Currently, two official plugins are available:
+Mi portfolio personal: un sitio de una sola página que presenta quién soy, en qué trabajé, qué stack uso y cómo contactarme, con un diseño propio (paleta violeta/azul, fondo de partículas interactivo) en vez de una plantilla genérica.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ¿Para qué sirve?
 
-## React Compiler
+Es la carta de presentación que uso para mostrar mi trabajo a reclutadores, clientes freelance y cualquiera que quiera saber qué hago. Reúne en un solo lugar mi experiencia, proyectos, stack técnico, formación y una vía directa de contacto (formulario + copiar email/redes con un click).
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## ¿Qué tecnologías usa?
 
-Note: This will impact Vite dev & build performances.
+- **React 19 + TypeScript + Vite** — base de la app y del build.
+- **Tailwind CSS v4** — estilos, con tokens de color propios para tema claro/oscuro.
+- **Framer Motion** — todas las animaciones de scroll, hover y transiciones.
+- **react-i18next** — sitio bilingüe (español/inglés) con detección automática de idioma.
+- **tsparticles** — fondo de partículas interactivo (reacciona al mouse con hover y click).
+- **EmailJS** — envío del formulario de contacto sin backend propio.
+- **react-icons + lucide-react** — íconos, incluyendo los logos de cada tecnología con su color de marca.
 
-## Expanding the Oxlint configuration
+## ¿Cómo lo veo funcionando?
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+**Demo en vivo:** [tomasromeroportfolio.vercel.app](https://tomasromeroportfolio.vercel.app/)
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+## ¿Cómo lo corro en mi máquina?
+
+```bash
+git clone https://github.com/Tomas-Romero/Portfolio.git
+cd Portfolio
+npm install
+cp .env.example .env   # completar las claves de EmailJS
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Abrí `http://localhost:5173`. Para generar el build de producción: `npm run build` (el resultado queda en `dist/`).
+
+## ¿Qué partes interesantes tiene?
+
+- **Tema claro/oscuro real**: los colores están definidos como tokens CSS que se remapean según la clase activa en `<html>`, no hardcodeados por componente.
+- **Fondo de partículas consciente del tema**: el color de las partículas cambia entre modo claro y oscuro para mantener buen contraste, y reacciona al mouse en toda la página (no solo donde no hay contenido encima) sin interferir con los clicks en botones o links.
+- **Timeline con scroll-spy propio**: en Experiencia y Formación, el ítem que estás mirando se resalta automáticamente a medida que scrolleás, además de poder seleccionarlo con un click.
+- **Stack coloreado por marca**: cada tecnología en "Mi Stack" y en las tarjetas de proyectos usa el color oficial de su logo, no un color genérico del sitio.
+- **Contacto sin fricción**: cada dato de contacto (email, GitHub, LinkedIn) se puede copiar con un click además de abrir el link directo.
