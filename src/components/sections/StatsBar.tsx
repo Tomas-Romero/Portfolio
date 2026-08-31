@@ -4,8 +4,10 @@ import { useTranslation } from 'react-i18next'
 
 const stats = [
   { target: 3, prefix: '+', labelKey: 'stats.experience' },
-  { target: 2, prefix: '', labelKey: 'stats.projects' },
+  {target: 5, prefix: '+', labelKey: 'stats.clients'},
+  { target: 7, prefix: '', labelKey: 'stats.projects' },
   { target: 9, prefix: '+', labelKey: 'stats.training' },
+  
 ]
 
 function Counter({ target, prefix }: { target: number; prefix: string }) {
