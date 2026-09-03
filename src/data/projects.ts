@@ -25,8 +25,8 @@ export const projects: Project[] = [
     descriptionKey: 'projects.items.kioscontrol.description',
     image: '/assets/projects/kioscontrol_caja.png',
     tags: ['Next.js', 'TypeScript', 'Supabase', 'PostgreSQL'],
-    liveUrl: 'https://kioscontrol-demo.vercel.app/caja',
-    demoCredentials: { user: 'admin@gmail.com', password: 'claveadmin' },
+    liveUrl: 'https://kioscontrol-demo.vercel.app/login',
+    demoCredentials: { user: 'admin@demo1.kioscontrol.local', password: 'Demo1Admin!2026' },
   },
   {
     id: 'frakta',
