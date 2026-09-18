@@ -111,13 +111,21 @@
         "title": "Portfolio",
         "description": "Este mismo sitio: mi portfolio personal con React, TypeScript y Tailwind CSS, animaciones en Framer Motion, modo claro/oscuro, soporte bilingüe y un fondo de partículas interactivo."
       },
+      "tarcTech": {
+        "title": "TARC Tech",
+        "description": "Sitio de marca para mi trabajo freelance: landing bilingüe de una sola página pensada para que un dueño de PyME entienda en 30 segundos qué le puedo resolver y escriba por WhatsApp. Sin precios ni testimonios inventados — solo capturas reales de sistemas ya hechos."
+      },
       "modasVanina": {
         "title": "Modas Vanina",
-        "description": "Catálogo online sin precios para una tienda de indumentaria y variedades en San Rafael, Mendoza. El cliente arma su lista y consulta por WhatsApp; la dueña administra todo desde un panel propio."
+        "description": "Catálogo online sin precios para una tienda de indumentaria y variedades en San Rafael, Mendoza. El cliente arma su lista y consulta por WhatsApp; la dueña administra el catálogo con fotos, descripciones generadas por IA y publicación directa a redes."
       },
       "kioscontrol": {
         "title": "KiosControl",
-        "description": "Sistema POS y gestión comercial para kioscos: cobro multi-método, lector de código de barras, venta por peso, modo offline, impresión térmica, cuentas corrientes y reportes de BI."
+        "description": "Sistema POS y gestión comercial para kioscos: cobro multi-método, lector de código de barras, venta por peso, modo offline, impresión térmica, cuentas corrientes y reportes de BI. Soporta despliegue multi-tenant para varios comercios."
+      },
+      "dashboard": {
+        "title": "Dashboard",
+        "description": "Panel de control personal para gestionar proyectos freelance, clientes, credenciales e infraestructura: CRM liviano, Kanban de tareas, bóveda de credenciales cifrada en el navegador, time tracking y facturación con exportación a PDF."
       },
       "frakta": {
         "title": "Frakta",
@@ -126,6 +134,10 @@
       "gatheringHR": {
         "title": "GatheringHR",
         "description": "Sitio para una consultora de RR.HH. con vacantes en tiempo real vía Google Sheets API, formularios de contacto separados para empresas y postulantes, y diseño responsive optimizado para SEO."
+      },
+      "restoZest": {
+        "title": "RestoZest",
+        "description": "Sistema de gestión gastronómica en desarrollo: menú digital, POS, panel de mozos y pantalla de cocina en un monorepo offline-first, con un hub local que mantiene el servicio funcionando aunque se corte internet."
       },
       "proyectoBD": {
         "title": "Proyecto Base de Datos",

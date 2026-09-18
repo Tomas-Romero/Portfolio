@@ -11,6 +11,8 @@ import {
   SiNextdotjs,
   SiVite,
   SiSupabase,
+  SiFramer,
+  SiTurborepo,
 } from 'react-icons/si'
 import type { Skill } from '../types'
 
@@ -23,6 +25,7 @@ export const skills: Skill[] = [
   { id: 'bootstrap', name: 'Bootstrap', category: 'frontend', icon: FaBootstrap, level: 75, color: '#7952B3' },
   { id: 'sass', name: 'SASS', category: 'frontend', icon: SiSass, level: 70, color: '#CC6699' },
   { id: 'vite', name: 'Vite', category: 'frontend', icon: SiVite, level: 80, color: '#646CFF' },
+  { id: 'framer-motion', name: 'Framer Motion', category: 'frontend', icon: SiFramer, level: 80, color: '#0055FF' },
   { id: 'nodejs', name: 'Node.js', category: 'backend', icon: FaNodeJs, level: 75, color: '#339933' },
   { id: 'express', name: 'Express', category: 'backend', icon: SiExpress, level: 70, color: '#A0AEC0' },
   { id: 'postgresql', name: 'PostgreSQL', category: 'backend', icon: SiPostgresql, level: 75, color: '#4169E1' },
@@ -34,6 +37,7 @@ export const skills: Skill[] = [
   { id: 'postman', name: 'Postman', category: 'tools', icon: SiPostman, level: 75, color: '#FF6C37' },
   { id: 'excel', name: 'Excel', category: 'tools', icon: FaFileExcel, level: 80, color: '#217346' },
   { id: 'claude', name: 'Claude', category: 'tools', icon: SiClaude, level: 85, color: '#D97757' },
+  { id: 'turborepo', name: 'Turborepo', category: 'tools', icon: SiTurborepo, level: 65, color: '#EF4444' },
 ]
 
 export const categories: { id: 'all' | Skill['category']; labelKey: string }[] = [
