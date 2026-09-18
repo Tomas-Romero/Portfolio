@@ -20,7 +20,7 @@ Es la carta de presentación que uso para mostrar mi trabajo a reclutadores, cli
 
 ## ¿Cómo lo veo funcionando?
 
-**Demo en vivo:** [tomasromeroportfolio.vercel.app](https://tomasromeroportfolio.vercel.app/)
+**Demo en vivo:** [tomasromero.tarctech.com](https://tomasromero.tarctech.com)
 
 ## ¿Cómo lo corro en mi máquina?
 
